@@ -1,0 +1,29 @@
+keys,en,de,ru
+New Game,New Game,-,Новая Игра
+Continue,Continue,-,Продолжить
+Guide,Guide,-,Гайд
+Resolution,Resolution,-,Разрешение
+Exit,Exit,-,Выход
+Back,Back,-,Обратно
+Are you sure you want to start the new game?,Are you sure you want to start the new game?,-,"Вы уверены, что хотите начать игру заново?"
+Yes,Yes,-,Да
+No,No,-,Нет
+How to Play:,How to Play:,-,Как играть:
+"A, D, Left Arrow, Right Arrow - Move to Left and Right.\nWhitespace, C, Up Arrow - Fly.\nShift, Righ Mouse, Q - Move Slower.\nW, S, Down Arrow - Sudden Braking.\nEsc - Pause.","A, D, Left Arrow, Right Arrow - Move to Left and Right.\nWhitespace, C, Up Arrow - Fly.\nShift, Righ Mouse, Q - Move Slower.\nW, S, Down Arrow - Sudden Braking.\nEsc - Pause.",-,"A, D, Стрелка Влево, Стрелка Вправо - Перемещение Влево и Вправо. \nПробел, C, Стрелка Вверх - Полет. \nShift, Правая Кнопка Мыши, Q - Двигаться медленнее. \nW, S, Стрелка Вниз - Резкое торможение. \nEsc - Пауза."
+Year: 2xxx\nLocation: Unknown City\n\nYou wake up one fine morning and notice that\n your pack is all flying off to find a new home.\n,Year: 2xxx\nLocation: Unknown City\n\nYou wake up one fine morning and notice that\n your pack is all flying off to find a new home.\n,-,"Год: 2xxx\nМестонахождение: Неизвестный Город\n\nОдним прекрасным утром вы просыпаетесь и замечаете, что\nвся ваша стая улетела искать новый дом.\n"
+Your goal is to find them by navigating\nthe strange signs left in the way.\n\n[Press the Whitespace to start the game.]\n,Your goal is to find them by navigating\nthe strange signs left in the way.\n\n[Press the Whitespace to start the game.]\n,-,"Ваша цель, найти их, ориентируясь\nпо странным знакам, оставшиеся на пути.\n\n[Нажмите Пробел, чтобы начать игру.]\n"
+Back to the Main Menu,Back to the Main Menu,-,Выйти в Меню
+Exit from the Game,Exit from the Game,-,Выйти из игры
+"A, D, Left Arrow, Right Arrow - Move to Left and Right.\nWhitespace, C, Up Arrow - Fly.\n","A, D, Left Arrow, Right Arrow - Move to Left and Right.\nWhitespace, C, Up Arrow - Fly.\n",-,"A, D, Стрелка Влево, Стрелка Вправо - Перемещение Влево и Вправо. \nПробел, C, Стрелка Вверх - Полет.\n"
+Don't touch the spikes and barbed wire.,Don't touch the spikes and barbed wire.,-,Не трогай шипы и колючую проволоку.
+Flowers wil save your progress.,Flowers wil save your progress.,-,Цветы сохраняют твой прогресс.
+Activate the button to open the door.,Activate the button to open the door.,-,"Нажми на кнопку, чтобы открыть дверь."
+Remember. Flowers don’t keep doors open.,Remember. Flowers don’t keep doors open.,-,Помни. Цветы не сохраняют двери открытыми.
+"Shift, Righ Mouse, Q - Move Slower.\nIt will help to better control the pigeon.\n\nW, S, Up Arrow - Sudden Braking.\nIt will help you fall straight down.\n","Shift, Righ Mouse, Q - Move Slower.\nIt will help to better control the pigeon.\n\nW, S, Up Arrow - Sudden Braking.\nIt will help you fall straight down.\n",-,"Shift, Правая Кнопка Мыши, Q - Двигаться медленнее.\n Это поможет вам лучше контролировать голубя в воздухе.\n W, S, Стрелка Вниз - Резкое торможение.\n Это поможет вам упасть прямо вниз."
+"Barbed wire with a sign up, you can safely\npass through. (if the pigeon goes straight up)\n","Barbed wire with a sign up, you can safely\npass through. (if the pigeon goes straight up)\n",-,"Колючая проволока с надписью вверх, вы можете безопасно\nпроходить насквозь. (если голубь поднимается вверх)\n"
+"Barbed wire with a sign down, you can safely\npass through. (if the pigeon goes straight down)\n","Barbed wire with a sign down, you can safely\npass through. (if the pigeon goes straight down)\n",-,"Колючая проволока с надписью вниз, вы можете безопасно\nпроходить насквозь. (если голубь падает вниз)\n"
+HARD SECTION,HARD SECTION,-,СЛОЖНАЯ СЕКЦИЯ
+NEW HOME,NEW HOME,-,НОВЫЙ ДОМ
+Congratulations!\nYou have found your kin. Now you\ncan breathe a sigh of relief after\nsuch a long journey.,Congratulations!\nYou have found your kin. Now you\ncan breathe a sigh ofCongratulations!\nYou have found your kin. Now you\ncan breathe a sigh of relief after\nsuch a long journey.,-,Поздравляю!\nВы нашли своих сородичей. Теперь вы\nможет вздохнуть с облегчением после\nдолгого пути.\n
+"As you descend, you become fatigued and fall deeply. Then, through me, you... feel the many blades\npiercing into your flesh... . Feathers fly in different directions. A huge amount of blood\nis pouring out of you right into the iron floor, and with it, your internal organs...\n\nThe last thing you see are the bodies of your own kind, who, like you, fell into this stupid trap.\n","As you descend, you become fatigued and fall deeply. Then, through me, you... feel the many blades\npiercing into your flesh... . Feathers fly in different directions. A huge amount of blood\nis pouring out of you right into the iron floor, and with it, your internal organs...\n\nThe last thing you see are the bodies of your own kind, who, like you, fell into this stupid trap.\n",-,"По мере того как вы спускаетесь, вы резко устаете и падает глубоко вниз. Затем, через мгновения вы...\nчувствуете как множество лезвий вонзаются в вашу плоть... Перья разлетаются в разные стороны.\nОгромное количество крови выливается из вас прямо на железный пол, а вместе с ней\nи ваши внутренние органы...\n\nПоследнее, что вы видите, так это тела себе подобных, которые, как и вы, попали в эту глупую ловушку."
+Language:,Language:,-,Язык:
