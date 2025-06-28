@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://ooi2th2nkftx"]
+
+[ext_resource type="Script" path="res://resources/music.gd" id="1_gega2"]
+[ext_resource type="AudioStream" uid="uid://icm406me7dbj" path="res://Sounds/music/aude-mynd.ogg" id="2_j2h61"]
+[ext_resource type="AudioStream" uid="uid://k7c0qw7121t7" path="res://Sounds/music/shiiva-raw-anxiety.ogg" id="3_784ub"]
+[ext_resource type="AudioStream" uid="uid://drt8cjcdq1fb5" path="res://Sounds/Фон/neizvsten-zvuk-vetra-v-pustyne.ogg" id="3_epcvd"]
+
+[node name="Music" type="Node"]
+script = ExtResource("1_gega2")
+
+[node name="Audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_j2h61")
+volume_db = 1.874
+pitch_scale = 0.57
+
+[node name="Audio2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_784ub")
+volume_db = -12.181
+pitch_scale = 0.79
+
+[node name="Wind" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_epcvd")
+volume_db = -11.243
+pitch_scale = 0.71
+autoplay = true

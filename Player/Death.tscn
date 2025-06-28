@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqdxpm0n8n6g5"]
+
+[ext_resource type="Texture2D" uid="uid://dacysj3trknc2" path="res://Textures/Tilelist.png" id="1_32o7f"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x3p12"]
+atlas = ExtResource("1_32o7f")
+region = Rect2(272.102, 592.545, 29.7585, 33.6826)
+
+[node name="Death" type="CPUParticles2D"]
+process_mode = 1
+amount = 6
+speed_scale = 0.3
+explosiveness = 1.0
+lifetime_randomness = 0.25
+texture = SubResource("AtlasTexture_x3p12")
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 0.5
+initial_velocity_max = 500.0
+angular_velocity_min = -720.0
+angular_velocity_max = 720.0
+scale_amount_min = 0.5
+scale_amount_max = 0.5

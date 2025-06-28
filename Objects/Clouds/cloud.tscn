@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://cuv1t4prwa8y4"]
+
+[ext_resource type="Script" path="res://Objects/Clouds/cloud.gd" id="1_6r50i"]
+[ext_resource type="Texture2D" uid="uid://ci0btwtfojvsj" path="res://Textures/cloud1.png" id="1_l3s8n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5cdmt"]
+size = Vector2(368, 144)
+
+[node name="Cloud" type="CharacterBody2D"]
+process_mode = 1
+show_behind_parent = true
+z_index = -2
+collision_layer = 0
+collision_mask = 8
+script = ExtResource("1_6r50i")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.588235)
+texture = ExtResource("1_l3s8n")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-184, 0)
+shape = SubResource("RectangleShape2D_5cdmt")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

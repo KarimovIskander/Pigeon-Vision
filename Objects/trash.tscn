@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://niq17saqpkig"]
+
+[ext_resource type="Texture2D" uid="uid://dacysj3trknc2" path="res://Textures/Tilelist.png" id="1_f4l4r"]
+[ext_resource type="Script" path="res://Objects/trash.gd" id="2_vvqbn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lchce"]
+atlas = ExtResource("1_f4l4r")
+region = Rect2(512, 576, 64, 64)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_grdgc"]
+height = 32.0
+
+[node name="Trash" type="CharacterBody2D" groups=["Dead"]]
+process_mode = 1
+script = ExtResource("2_vvqbn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_lchce")
+
+[node name="Area2D" type="Area2D" parent="." groups=["Dead"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 0.586)
+scale = Vector2(1.113, 1.113)
+shape = SubResource("CapsuleShape2D_grdgc")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-5.341, 1.153)
+scale = Vector2(1.113, 1.113)
+shape = SubResource("CapsuleShape2D_grdgc")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

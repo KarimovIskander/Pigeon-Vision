@@ -1,0 +1,107 @@
+[gd_scene load_steps=4 format=3 uid="uid://bghcyf7spsc3g"]
+
+[ext_resource type="Script" path="res://World/pause.gd" id="1_ac6mx"]
+[ext_resource type="Theme" uid="uid://bq8ub6cs4b0fa" path="res://J_theme.tres" id="1_m620s"]
+[ext_resource type="FontFile" uid="uid://bd1xos06dc3y1" path="res://Old-Soviet.otf" id="2_ja3ir"]
+
+[node name="Pause" type="Control"]
+process_mode = 3
+z_index = 5
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ac6mx")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+process_mode = 3
+z_index = 1
+offset_left = 856.0
+offset_top = 808.0
+offset_right = 1038.0
+offset_bottom = 919.0
+theme = ExtResource("1_m620s")
+
+[node name="Contin" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_ja3ir")
+text = "Continue"
+
+[node name="Menu" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_ja3ir")
+text = "Back to the Main Menu"
+
+[node name="Exit" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_ja3ir")
+text = "Exit from the Game"
+
+[node name="Resol" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_ja3ir")
+text = "Resolution"
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_right = 1920.0
+offset_bottom = 1088.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.254902)
+
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect"]
+layout_mode = 0
+offset_left = 760.0
+offset_top = 392.0
+offset_right = 1139.0
+offset_bottom = 449.0
+theme_override_fonts/font = ExtResource("2_ja3ir")
+theme_override_font_sizes/font_size = 45
+text = "PAUSE"
+horizontal_alignment = 1
+
+[node name="Res" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1192.0
+offset_top = 808.0
+offset_right = 1192.0
+offset_bottom = 808.0
+
+[node name="OptionButton" type="OptionButton" parent="CanvasLayer/Res"]
+layout_mode = 0
+offset_top = 24.0
+offset_right = 14.0
+offset_bottom = 36.0
+theme = ExtResource("1_m620s")
+theme_override_fonts/font = ExtResource("2_ja3ir")
+
+[node name="Label" type="Label" parent="CanvasLayer/Res"]
+layout_mode = 0
+theme_override_fonts/font = ExtResource("2_ja3ir")
+text = "Resolution"
+
+[node name="Button" type="Button" parent="CanvasLayer/Res"]
+layout_mode = 0
+offset_left = 200.0
+offset_right = 275.0
+offset_bottom = 23.0
+theme = ExtResource("1_m620s")
+theme_override_fonts/font = ExtResource("2_ja3ir")
+text = "Back"
+
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Contin" to="." method="_on_contin_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Resol" to="." method="_on_resol_pressed"]
+[connection signal="item_selected" from="CanvasLayer/Res/OptionButton" to="." method="_on_option_button_item_selected"]
+[connection signal="pressed" from="CanvasLayer/Res/Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqg6kl33enqkf"]
+
+[ext_resource type="Texture2D" uid="uid://dacysj3trknc2" path="res://Textures/Tilelist.png" id="1_1adt7"]
+[ext_resource type="Script" path="res://Objects/Tube.gd" id="1_bk0o3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l8hac"]
+atlas = ExtResource("1_1adt7")
+region = Rect2(448, 576, 64, 64)
+
+[node name="Tube" type="Node2D"]
+process_mode = 1
+script = ExtResource("1_bk0o3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_l8hac")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(0, 16)
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Marker2D2" type="Marker2D" parent="."]
+position = Vector2(0, -16)
+
+[node name="Timer2" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]

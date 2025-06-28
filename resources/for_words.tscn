@@ -1,0 +1,67 @@
+[gd_scene load_steps=6 format=3 uid="uid://dt33dgdy7miko"]
+
+[ext_resource type="Script" path="res://resources/for_words.gd" id="1_d04g7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3nxm2"]
+size = Vector2(768, 384)
+
+[sub_resource type="Animation" id="Animation_f88vm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_gsp1c"]
+resource_name = "T"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2w1yd"]
+_data = {
+"RESET": SubResource("Animation_f88vm"),
+"T": SubResource("Animation_gsp1c")
+}
+
+[node name="ForWords" type="TextureRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_d04g7")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(64, 56)
+collision_layer = 32
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(320, 136)
+shape = SubResource("RectangleShape2D_3nxm2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_2w1yd")
+}
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

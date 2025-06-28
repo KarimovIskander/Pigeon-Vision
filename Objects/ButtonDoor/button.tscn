@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://dxrrmol052w82"]
+
+[ext_resource type="Script" path="res://Objects/ButtonDoor/button.gd" id="1_663l6"]
+[ext_resource type="Texture2D" uid="uid://dacysj3trknc2" path="res://Textures/Tilelist.png" id="1_r3rxp"]
+[ext_resource type="AudioStream" uid="uid://ce4tnjutfdvvd" path="res://Sounds/knopka-vklyucheniya-projektora.ogg" id="3_veage"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d1ch3"]
+size = Vector2(58, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oup78"]
+atlas = ExtResource("1_r3rxp")
+region = Rect2(320, 576, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ahvwt"]
+atlas = ExtResource("1_r3rxp")
+region = Rect2(448, 192, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g8b2y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oup78")
+}],
+"loop": true,
+"name": &"off",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ahvwt")
+}],
+"loop": true,
+"name": &"on",
+"speed": 5.0
+}]
+
+[node name="Button" type="Area2D"]
+scale = Vector2(0.8, 0.8)
+script = ExtResource("1_663l6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_d1ch3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_g8b2y")
+animation = &"off"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_veage")
+
+[connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]

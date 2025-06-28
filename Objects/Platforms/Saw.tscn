@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://dyq8g35t6hsjf"]
+
+[ext_resource type="Script" path="res://Objects/Platforms/Saw.gd" id="1_fes5l"]
+[ext_resource type="Texture2D" uid="uid://dacysj3trknc2" path="res://Textures/Tilelist.png" id="2_t6vhg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_30ljt"]
+atlas = ExtResource("2_t6vhg")
+region = Rect2(576, 576, 64, 64)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_es6om"]
+
+[node name="Saw" type="Node2D" groups=["Dead"]]
+process_mode = 1
+light_mask = 33
+script = ExtResource("1_fes5l")
+move_to = Vector2(0, -64)
+line_width = 0.0
+
+[node name="ActualPlatform" type="AnimatableBody2D" parent="." groups=["Dead"]]
+position = Vector2(0, -8.39216)
+collision_layer = 2
+
+[node name="Polygon2D" type="Polygon2D" parent="ActualPlatform"]
+visible = false
+polygon = PackedVector2Array(-80, -16, 80, -16, 80, 16, -80, 16)
+
+[node name="Sprite2D" type="Sprite2D" parent="ActualPlatform"]
+rotation = 100728.0
+texture = SubResource("AtlasTexture_30ljt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActualPlatform"]
+scale = Vector2(3, 3)
+shape = SubResource("CircleShape2D_es6om")
+
+[node name="Area2D" type="Area2D" parent="ActualPlatform" groups=["Dead"]]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="ActualPlatform/Area2D"]
+scale = Vector2(3, 3)
+shape = SubResource("CircleShape2D_es6om")

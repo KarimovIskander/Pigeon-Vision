@@ -1,0 +1,62 @@
+[gd_scene load_steps=8 format=3 uid="uid://tu8s7arjfse8"]
+
+[ext_resource type="Texture2D" uid="uid://dacysj3trknc2" path="res://Textures/Tilelist.png" id="1_kr5bk"]
+[ext_resource type="Script" path="res://Objects/ButtonDoor/door.gd" id="1_t1bfm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i7il0"]
+atlas = ExtResource("1_kr5bk")
+region = Rect2(384, 576, 64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2vi75"]
+size = Vector2(64, 64)
+
+[sub_resource type="Animation" id="Animation_fof8k"]
+resource_name = "Open"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_frjrj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_v7lcu"]
+_data = {
+"Open": SubResource("Animation_fof8k"),
+"RESET": SubResource("Animation_frjrj")
+}
+
+[node name="Door" type="StaticBody2D"]
+script = ExtResource("1_t1bfm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_i7il0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_2vi75")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_v7lcu")
+}
